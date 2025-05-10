@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+Requerimientos del reto:
+
+1. El usuario debe poder ingresar su usuario y contraseÃ±a
+2. El sistema debe ser capaz de validar si el usuario y contraseÃ±a ingresados por el usuario existen en la base de datos
+3. Si el usuario y contraseÃ±a son correctos, el sistema debe mostrar un mensaje de bienvenida y mostrar el timeline del usuario.
+4. Si el usuario y contraseÃ±a son incorrectos, el sistema debe mostrar un mensaje de error y no mostrar ningun timeline.
+
+*/
+
+        const usersDatabase = [
+            {
+                username: "andres",
+                password: "123",
+            },
+            {
+                username: "caro",
+                password: "456",
+            },
+            {
+                username: "mariana",
+                password: "789",
+            },
+        ];
+
+        const usersTimeline = [
+            {
+                username: "Estefany",
+                timeline: "Me encata Javascript!",
+            },
+            {
+                username: "Oscar",
+                timeline: "Bebeloper es lo mejor!",
+            },
+            {
+                username: "Mariana",
+                timeline: "A mi me gusta mÃ¡s el cafÃ© que el tÃ©",
+            },
+            {
+                username: "Andres",
+                timeline: "Yo hoy no quiero trabajar",
+            },
+        ];
+
+        let verified = false
+        while (verified == false) {
+            let user = prompt("Username")
+            let pass = prompt("Password")
+
+
+            for (i = 0; i < usersDatabase.length; i++) {
+                if (user == usersDatabase[i].username && pass == usersDatabase[i].password) {
+                    verified = true;
+                }
+            }
+            if (verified == true) {
+                break
+            }
+
+
+        }
+        console.log("1")
+        for (i = 0; i < usersTimeline.length; i++) {
+            if (user == usersTimeline[i].username.toLowerCase()) {
+                console.log(usersDatabase[i].timeline)
+            }
+        }
+
+
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
